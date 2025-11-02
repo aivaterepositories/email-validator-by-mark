@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free Email Validator - Classic Style</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Free Email Validator Tool</h1>
+
+    <p>
+      Welcome to our <strong>Free Email Validator</strong>. This simple tool helps you quickly check if email addresses are syntactically valid and if their domains have mail servers configured. It is designed to be <em>fast</em>, <em>easy-to-use</em>, and <em>free for everyone</em>.
+    </p>
+
+    <p>
+      Our service does <strong>not save</strong> or store any email addresses you enter. We respect your <strong>privacy</strong> and handle every validation <strong>in real-time</strong> strictly within your browser. No data leaves your computer except for DNS queries needed to confirm domain mail servers.
+    </p>
+
+    <p>
+      This tool is built <strong>for the community</strong>, by the community — helping individuals, developers, and businesses cleanse email lists, verify addresses, and improve email deliverability, all <strong>without any cost or signup required</strong>.
+    </p>
+
+    <hr />
+
+    <h2>Manual Email Verification</h2>
+    <input type="email" id="manual-email" placeholder="Enter email address..." />
+    <button onclick="verifyEmail()">Verify</button>
+    <p id="manual-result"></p>
+
+    <hr />
+
+    <h2>Bulk Email Verification</h2>
+    <textarea id="bulk-text" placeholder="Paste emails here, one per line" rows="10"></textarea>
+    <button onclick="verifyBulk()">Verify Bulk Emails</button>
+    <pre id="bulk-result"></pre>
+    <hr />
+
+    <h3>About Our Validator</h3>
+    <p>
+      Our validation process includes:
+      <ul>
+        <li>Checking the basic email format using proven regular expressions.</li>
+        <li>Verifying the presence of mail servers for the domain using MX DNS record lookups.</li>
+        <li>Blocking well-known disposable email providers often used for temporary emails.</li>
+        <li>Flagging role-based email addresses like admin@, support@, and info@.</li>
+        <li>Ensuring email parts meet standard length requirements.</li>
+      </ul>
+    </p>
+
+    <p>
+      <strong>Please note</strong> that this validator does <em>not</em> guarantee mailbox existence or that the email actually receives mail, as that would require checking servers via SMTP which cannot be done here due to privacy, security, and technical reasons.
+    </p>
+
+    <p>
+      We continuously update our disposable domain blocklist and strive to maintain a reliable free tool accessible to everyone. Please use responsibly and respect fair usage.
+    </p>
+
+    <hr />
+
+    <h3>Privacy & Security</h3>
+    <p>
+      We take your privacy seriously. No emails or email lists are logged, saved, or transmitted beyond what is necessary for DNS MX record lookups. DNS queries are made only to public resolvers like Google DNS to verify domain mail servers.
+    </p>
+    <p>
+      This project is community-driven and free — made possible by generous contributors and open-source technologies.
+    </p>
+
+    <hr />
+
+    <footer style="text-align:center; font-size: 0.8em; margin-top: 2rem;">
+      &copy; 2025 Free Email Validator. All rights reserved.
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
